@@ -60,8 +60,6 @@ export class InMemoryDataService implements InMemoryDbService {
       movies: [
         {
           id: 1,
-          imdbId: 'tt2386490',
-          imdbRating: 8.1,
           title: 'How to Train Your Dragon: The Hidden World',
           poster: 'https://m.media-amazon.com/images/M/MV5BMjIwMDIwNjAyOF5BMl5BanBnXkFtZTgwNDE1MDc2NTM@._V1_SX300.jpg',
           backdrop: 'https://m.media-amazon.com/images/M/MV5BMzI3MTc2NDY4MV5BMl5BanBnXkFtZTgwNDU3NTI2NjM@._V1_SX1777_CR0,0,1777,736_AL_.jpg',
@@ -76,15 +74,10 @@ export class InMemoryDataService implements InMemoryDbService {
             'Jonah Hill'
           ],
           release_date: '02/01/2019',
-          start_date: '02/01/2019',
-          end_date: '04/01/2019',
-          runtime: 104,
-          mpaa: 'PG'
+          runtime: 104
         },
         {
           id: 2,
-          imdbId: 'tt0437086',
-          imdbRating: 6,
           title: 'Alita: Battle Angel',
           poster: 'https://m.media-amazon.com/images/M/MV5BNzVhMjcxYjYtOTVhOS00MzQ1LWFiNTAtZmY2ZmJjNjIxMjllXkEyXkFqcGdeQXVyNTc5OTMwOTQ@._V1_SX300.jpg',
           backdrop: 'https://m.media-amazon.com/images/M/MV5BMjA3NjEwMDY3N15BMl5BanBnXkFtZTgwNTQ1MTQzNDM@._V1_SX1777_CR0,0,1777,960_AL_.jpg',
@@ -94,15 +87,10 @@ export class InMemoryDataService implements InMemoryDbService {
           director: 'Robert Rodriguez',
           cast: ['Eiza González', 'Jennifer Connelly', 'Jackie Earle Haley'],
           release_date: '02/05/2019',
-          start_date: '02/05/2019',
-          end_date: '04/05/2019',
           runtime: 132,
-          mpaa: 'PG-13'
         },
         {
           id: 3,
-          imdbId: 'tt6823368',
-          imdbRating: 7.3,
           title: 'Glass',
           poster: 'https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg',
           backdrop: 'https://m.media-amazon.com/images/M/MV5BY2IwMWE4YjctNTVlMy00MDUwLTkxOGYtMmJlNDEwYmViN2YxXkEyXkFqcGdeQXVyMzQ5ODY3NjA@._V1_SX1777_CR0,0,1777,999_AL_.jpg',
@@ -118,15 +106,10 @@ export class InMemoryDataService implements InMemoryDbService {
             'James McAvoy'
           ],
           release_date: '01/18/2019',
-          start_date: '01/18/2019',
-          end_date: '03/18/2019',
-          runtime: 129,
-          mpaa: 'PG-13'
+          runtime: 129
         },
         {
           id: 4,
-          imdbId: 'tt1477834',
-          imdbRating: 7.5,
           title: 'Aquaman',
           poster: 'https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SX300.jpg',
           backdrop: 'https://m.media-amazon.com/images/M/MV5BMTg1MjMyOTQ2MV5BMl5BanBnXkFtZTgwNDA5NDcxNzM@._V1_.jpg',
@@ -142,15 +125,10 @@ export class InMemoryDataService implements InMemoryDbService {
             'Willem Dafoe'
           ],
           release_date: '12/21/2018',
-          start_date: '12/21/2018',
-          end_date: '03/12/2019',
-          runtime: 143,
-          mpaa: 'PG-13'
+          runtime: 143
         },
         {
           id: 5,
-          imdbId: 'tt5028340',
-          imdbRating: 7.2,
           title: 'Mary Poppins Returns',
           poster: 'https://m.media-amazon.com/images/M/MV5BMTk0NDIzMTA1MF5BMl5BanBnXkFtZTgwMzM0MTUzNjM@._V1_SX300.jpg',
           backdrop: 'https://m.media-amazon.com/images/M/MV5BMTA4MTEyMDQ4MzdeQTJeQWpwZ15BbWU4MDIxNzA0MDcz._V1_SX1500_CR0,0,1500,999_AL_.jpg',
@@ -166,15 +144,10 @@ export class InMemoryDataService implements InMemoryDbService {
             'Emily Mortimer'
           ],
           release_date: '12/21/2018',
-          start_date: '12/21/2018',
-          end_date: '03/12/2019',
-          runtime: 130,
-          mpaa: 'PG'
+          runtime: 130
         },
         {
           id: 6,
-          imdbId: 'tt6966692',
-          imdbRating: 8.3,
           title: 'Green Book',
           poster: 'https://m.media-amazon.com/images/M/MV5BMjMyNzExNzQ5OV5BMl5BanBnXkFtZTgwNjM2MjIxNjM@._V1_SX300.jpg',
           backdrop: 'https://m.media-amazon.com/images/M/MV5BMmE2OGVkNjktZGFhMS00YTZkLTg5Y2ItYmExZDgyMzA4YmU1XkEyXkFqcGdeQXVyNTc5OTMwOTQ@._V1_.jpg',
@@ -184,15 +157,10 @@ export class InMemoryDataService implements InMemoryDbService {
           director: 'Peter Farrelly',
           cast: ['Mahershala Ali', 'Viggo Mortensen', 'Linda Cardellini'],
           release_date: '11/16/2018',
-          start_date: '11/16/2018',
-          end_date: '03/16/2019',
           runtime: 130,
-          mpaa: 'PG-13'
         },
         {
           id: 7,
-          imdbId: 'tt5848272',
-          imdbRating: 7.3,
           title: 'Ralph Breaks the Internet',
           poster: 'https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_SX300.jpg',
           backdrop: 'https://m.media-amazon.com/images/M/MV5BMTgxNTM2Njk3M15BMl5BanBnXkFtZTgwOTQyMjI5NDM@._V1_SX1777_CR0,0,1777,744_AL_.jpg',
@@ -201,15 +169,10 @@ export class InMemoryDataService implements InMemoryDbService {
           director: 'Phil Johnston, Rich Moore',
           cast: ['Alan Tudyk', 'John C. Reilly', 'Sarah Silverman'],
           release_date: '11/21/2018',
-          start_date: '11/21/2018',
-          end_date: '02/21/2019',
           runtime: 112,
-          mpaa: 'PG'
         },
         {
           id: 8,
-          imdbId: 'tt5886046',
-          imdbRating: 6.4,
           title: 'Escape Room',
           poster: 'https://m.media-amazon.com/images/M/MV5BMjQ2NDMwMTY3MF5BMl5BanBnXkFtZTgwNDg5OTc1NjM@._V1_SX300.jpg',
           backdrop: 'https://m.media-amazon.com/images/M/MV5BMTk3OTI0NDQ4OF5BMl5BanBnXkFtZTgwNTYwMDg1NjM@._V1_.jpg',
@@ -219,10 +182,7 @@ export class InMemoryDataService implements InMemoryDbService {
           director: 'Adam Robitel',
           cast: ['Deborah Ann Woll', 'Taylor Russel'],
           release_date: '01/04/2019',
-          start_date: '01/04/2019',
-          end_date: '04/01/2019',
-          runtime: 99,
-          mpaa: 'PG-13'
+          runtime: 99
         }
       ],
       showtimes: [
