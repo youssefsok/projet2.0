@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AuthenticationService} from '../../_service/authentication.service';
 
 declare var $: any;
 
@@ -7,17 +8,28 @@ declare var $: any;
   templateUrl: './authentication.component.html',
   styleUrls: ['./authentication.component.scss']
 })
-export class AuthenticationComponent implements OnInit,AfterViewInit {
+export class AuthenticationComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(private authenticationService: AuthenticationService) {
+  }
 
   ngOnInit() {
   }
 
   ngAfterViewInit(): void {
-    $('.message a').click(function(){
-      $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    $('.message a').click(function () {
+      $('form').animate({height: 'toggle', opacity: 'toggle'}, 'slow');
     });
   }
+
+
+  register(formData: any) {
+  }
+
+  login(formData: any) {
+    console.log(formData.value);
+    this.authenticationService.login(formData.value.username, formData.value.password).subscribe(succ => console.log(succ));
+  }
+
 
 }

@@ -1,4 +1,3 @@
-import {InMemoryDataService} from './_service/in-memory-data.service';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
@@ -24,6 +23,7 @@ import {CarouselModule} from 'ngx-bootstrap/carousel';
 import {AuthenticationComponent} from './component/authentication/authentication.component';
 import {JwtInterceptor} from './_helpers/jwt.interceptor';
 import {ErrorInterceptor} from './_helpers/error.interceptor';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,12 +44,10 @@ import {ErrorInterceptor} from './_helpers/error.interceptor';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     ModalModule.forRoot(),
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
     CarouselModule.forRoot()
   ],
   providers: [
