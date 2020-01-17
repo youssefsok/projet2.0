@@ -21,7 +21,10 @@ export class MovieSearchComponent implements OnInit {
   }
 
   search(term: string): void {
-    this.db.searchMovies(term).subscribe(next => this.movies = next);
+    this.db.searchMovies(term).subscribe(next => {
+      console.log(next);
+      this.movies = next;
+    });
   }
 
 }

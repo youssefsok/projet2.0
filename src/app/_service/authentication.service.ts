@@ -29,6 +29,7 @@ export class AuthenticationService {
         // login successful if there's a jwt token in the response
         if (user) {
           // store user details and jwt token in local storage to keep user logged in between page refreshes
+
           localStorage.setItem('currentUser', JSON.stringify(user));
           this.currentUserSubject.next(user);
         }
@@ -41,5 +42,9 @@ export class AuthenticationService {
     // remove user from local storage to log user out
     localStorage.removeItem('currentUser');
     this.currentUserSubject.next(null);
+  }
+
+  register(user: any) {
+    return this.http.post<any>(Config.apiUrl + '/' + this.usersUrl , user);
   }
 }

@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {AuthenticationService} from '../../_service/authentication.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 declare var $: any;
 
@@ -10,7 +11,7 @@ declare var $: any;
 })
 export class AuthenticationComponent implements OnInit, AfterViewInit {
 
-  constructor(private authenticationService: AuthenticationService) {
+  constructor(private authenticationService: AuthenticationService, private route: Router) {
   }
 
   ngOnInit() {
@@ -24,11 +25,18 @@ export class AuthenticationComponent implements OnInit, AfterViewInit {
 
 
   register(formData: any) {
+    console.log(formData);
+    this.authenticationService.register(formData.value).subscribe(succ => console.log(succ));
+
   }
 
   login(formData: any) {
     console.log(formData.value);
-    this.authenticationService.login(formData.value.username, formData.value.password).subscribe(succ => console.log(succ));
+    this.authenticationService.login(formData.value.username, formData.value.password).subscribe(succ => {
+        this.route.navigate(['frontpage']);
+
+      }
+    );
   }
 
 

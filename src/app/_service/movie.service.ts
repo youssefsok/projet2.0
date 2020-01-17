@@ -5,12 +5,13 @@ import {Injectable} from '@angular/core';
 import {Movie} from './../interface/movie';
 import {Showtime} from './../interface/showtime';
 import {HttpClient} from '@angular/common/http';
+import {Config} from '../../Config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
-  private moviesUrl =  'api/movies';
+  private moviesUrl = 'api/movies';
   private showtimesUrl = 'api/showtimes';
 
   constructor(private http: HttpClient) {
@@ -25,13 +26,8 @@ export class MovieService {
   }
 
   // Get all movies
-  getMovies(limit?: number): Observable<Movie[]> {
-    return this.http.get<Movie[]>(this.moviesUrl).pipe(
-      map(movies => {
-        return limit ? movies.slice(0, limit) : movies;
-      }),
-      catchError(this.handleError<Movie[]>(`getMovies`, []))
-    );
+  getMovies(): Observable<Movie[]> {
+    return this.http.get<Movie[]>(Config.apiUrl + '/' + this.moviesUrl);
   }
 
   // Get now playing moving
@@ -112,8 +108,6 @@ export class MovieService {
   // search movies
   searchMovies(term: string): Observable<Movie[]> {
 
-    return this.http.get<Movie[]>(`${this.moviesUrl}/?title=${term}`).pipe(
-      catchError(this.handleError<Movie[]>(`searchMovies`, []))
-    );
+    return this.http.get<Movie[]>(`${Config.apiUrl + '/' + this.moviesUrl}/?filter[where][title][like]=${term}`);
   }
 }

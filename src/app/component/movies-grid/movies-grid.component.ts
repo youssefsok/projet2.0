@@ -1,8 +1,8 @@
-import { Movie } from './../../interface/movie';
-import { MovieService } from '../../_service/movie.service';
-import { Component, OnInit, Input, TemplateRef } from '@angular/core';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import {Movie} from './../../interface/movie';
+import {MovieService} from '../../_service/movie.service';
+import {Component, OnInit, Input, TemplateRef} from '@angular/core';
+import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
+import {BsModalService, BsModalRef} from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-movies-grid',
@@ -17,14 +17,15 @@ export class MoviesGridComponent implements OnInit {
   modalRef: BsModalRef;
   previewUrl = '';
 
-  constructor(private db: MovieService, private modalService: BsModalService, private sanitizer: DomSanitizer) { }
+  constructor(private db: MovieService, private modalService: BsModalService, private sanitizer: DomSanitizer) {
+  }
 
   ngOnInit() {
     this.getMovies();
   }
 
   getMovies() {
-    this.db.getMovies(this.limit).subscribe(movies => this.movies = movies);
+    this.db.getMovies().subscribe(movies => this.movies = movies);
   }
 
   openModal(template: TemplateRef<any>, previewUrl: string) {

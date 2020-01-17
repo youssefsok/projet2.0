@@ -18,6 +18,6 @@ export class MoviesSliderComponent implements OnInit {
   }
 
   getMovies() {
-    this.db.getMovies(this.limit).subscribe(movies => this.movies = movies);;
+    this.db.getMovies().subscribe(movies => this.movies = movies);
   }
 }
